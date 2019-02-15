@@ -355,9 +355,9 @@ public final class CriteriaTemplates {
                     put("field", "breachingObligationsEnvironmental").
                     put("title_code", "crit_eu_title_breaching_obligations_environmental").
                     put("description_code", "crit_eu_text_breaching_obligations_environmental").
-                    put("is_always_checked", "false").
+                   put("is_always_checked", "false").
                     put("default_value", "true").
-                    put("is_disabled", "true").
+		    put("is_disabled", "true").     
                     put("criterion", ExclusionCriterion.BREACHING_OF_OBLIGATIONS_ENVIRONMENTAL).build(),
 
             ImmutableMap.<String, Object>builder().
@@ -377,7 +377,7 @@ public final class CriteriaTemplates {
                     put("description_code", "crit_eu_text_breaching_obligations_labour").
                     put("is_always_checked", "false").
                     put("default_value", "true").
-                    put("is_disabled", "true").
+		    put("is_disabled", "true").
                     put("criterion", ExclusionCriterion.BREACHING_OF_OBLIGATIONS_LABOUR).build(),
 
             ImmutableMap.<String, Object>builder().
@@ -445,7 +445,7 @@ public final class CriteriaTemplates {
                     put("field", "guiltyGrave").
                     put("title_code", "crit_eu_title_guilty_misconduct").
                     put("description_code", "crit_eu_text_guilty_misconduct").
-                    put("is_always_checked", "false").
+                    put("is_always_checked", "true").
                     put("default_value", "true").
                     put("is_disabled", "true").
                     put("criterion", ExclusionCriterion.GUILTY_OF_PROFESSIONAL_MISCONDUCT).build(),
@@ -455,7 +455,7 @@ public final class CriteriaTemplates {
                     put("field", "agreementsWithOtherEO").
                     put("title_code", "crit_eu_title_agreement_economic").
                     put("description_code", "crit_eu_text_agreement_economic").
-                    put("is_always_checked", "false").
+                    put("is_always_checked", "true").
                     put("default_value", "true").
                     put("is_disabled", "true").
                     put("criterion", ExclusionCriterion.AGREEMENTS_WITH_OTHER_EO).build(),
@@ -465,7 +465,7 @@ public final class CriteriaTemplates {
                     put("field", "conflictInterest").
                     put("title_code", "crit_eu_title_conflict_interest").
                     put("description_code", "crit_eu_text_conflict_interest").
-                    put("is_always_checked", "false").
+                    put("is_always_checked", "true").
                     put("default_value", "true").
                     put("is_disabled", "true").
                     put("criterion", ExclusionCriterion.CONFLICT_OF_INTEREST_EO_PROCUREMENT_PROCEDURE).build(),
@@ -475,7 +475,7 @@ public final class CriteriaTemplates {
                     put("field", "involvementPreparationProcurement").
                     put("title_code", "crit_eu_title_involvement").
                     put("description_code", "crit_eu_text_involvement").
-                    put("is_always_checked", "false").
+                    put("is_always_checked", "true").
                     put("default_value", "true").
                     put("is_disabled", "true").
                     put("criterion", ExclusionCriterion.DIRECT_INVOLVEMENT_PROCUREMENT_PROCEDURE).build(),
@@ -485,7 +485,7 @@ public final class CriteriaTemplates {
                     put("field", "earlyTermination").
                     put("title_code", "crit_eu_title_early_termination").
                     put("description_code", "crit_eu_text_early_termination").
-                    put("is_always_checked", "false").
+                    put("is_always_checked", "true").
                     put("default_value", "true").
                     put("is_disabled", "true").
                     put("criterion", ExclusionCriterion.EARLY_TERMINATION).build(),
@@ -495,7 +495,7 @@ public final class CriteriaTemplates {
                     put("field", "guiltyMisinterpretation").
                     put("title_code", "crit_eu_title_guilty_misinterpretation").
                     put("description_code", "crit_eu_text_guilty_misinterpretation").
-                    put("is_always_checked", "false").
+                    put("is_always_checked", "true").
                     put("default_value", "true").
                     put("is_disabled", "true").
                     put("criterion", ExclusionCriterion.GUILTY_OF_MISINTERPRETATION).build()
