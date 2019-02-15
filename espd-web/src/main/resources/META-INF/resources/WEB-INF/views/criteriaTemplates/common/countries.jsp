@@ -30,7 +30,8 @@
 <tiles:importAttribute name="field"/>
 <tiles:importAttribute name="cssClass"/>
 <form:select path="${field}" cssClass="${cssClass} optsorted">
-    <form:option value="${null}" label="---"/>
+  <%-- <form:option value="${null}" label="---"/> --%>
+<form:option value="LT" label="Lietuva"/> --%>
     <c:forEach items="<%=Country.VALUES%>" var="cty">
         <form:option data-i18n="country_${cty.iso2Code}" value="${cty}">${i18n["country_".concat(cty.iso2Code)]}</form:option>
     </c:forEach>

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
@@ -74,13 +74,30 @@
                         <s:message code='crit_eu_main_purely_national'/>
                     </span>
 
-	                <tiles:insertDefinition name="checkTemplate">
+<c:if test="${!espd.extendCe}">
+	<tiles:insertDefinition name="checkTemplate">
 	                    <tiles:putAttribute name="field" value="purelyNationalGrounds"/>
 	                    <tiles:putAttribute name="title_code" value="crit_eu_title_purely_national"/>
 	                    <tiles:putAttribute name="description_code" value="crit_eu_text_purely_national"/>
 	                    <tiles:putAttribute name="hasCriterion" value="true"/>
 	                    <tiles:putAttribute name="criterion" value="${nationalExclusionGrounds}"/>
+ 			    <tiles:putAttribute name="ischecked" value="true"/>
+			    <tiles:putAttribute name="is_always_checked" value="true"/> 
 	                </tiles:insertDefinition>
+</c:if>
+<c:if test="${espd.extendCe}">
+	<tiles:insertDefinition name="checkTemplate">
+	                    <tiles:putAttribute name="field" value="purelyNationalGrounds"/>
+	                    <tiles:putAttribute name="title_code" value="crit_eu_title_purely_national"/>
+	                    <tiles:putAttribute name="description_code" value="crit_eu_text_purely_national"/>
+	                    <tiles:putAttribute name="hasCriterion" value="true"/>
+	                    <tiles:putAttribute name="criterion" value="${nationalExclusionGrounds}"/>
+ 			    <tiles:putAttribute name="ischecked" value="true"/>
+			    <tiles:putAttribute name="is_always_checked" value="false"/> 
+	                </tiles:insertDefinition>
+</c:if>
+
+	                
             </div>
         </div>
         <tiles:insertDefinition name="footerButtons">

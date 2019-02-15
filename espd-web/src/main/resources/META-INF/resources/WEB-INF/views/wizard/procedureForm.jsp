@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
@@ -28,16 +28,16 @@
 </div>
 <div class="panel panel-espd">
     <div class="panel-heading" data-toggle="collapse" data-target="#ojsdiv">
-        <h4 class="panel-title">${span18n['createca_info_pub']}</h4>
+    <h4 class="panel-title">${span18n['createca_info_pub']}</h4>
     </div>
     <div id="ojsdiv" class="panel-body collapse in">
         <div class="alert alert-espd-info-dotted">
-            ${div18n['createca_to_be_filled_alert']}
+<!--            ${div18n['createca_to_be_filled_alert']} -->
             <c:if test="${agent eq 'ca'}">
                 <div class="form-group">
-                    <label class="control-label col-md-4">${span18n['createca_ted_reception_id']}</label>
+<!--                <label class="control-label col-md-4">${span18n['createca_ted_reception_id']}</label> -->
                     <div class="col-md-8">
-                        <form:input path="tedReceptionId" id="procedureTedReceptionId" cssClass="form-control small"
+                        <form:input path="tedReceptionId" id="procedureTedReceptionId" type="hidden" cssClass="form-control small"
                                     data-i18n="filter_ted_reception_id_placeholder"
                                     placeholder="${i18n['filter_ted_reception_id_placeholder']}"/>
                     </div>
@@ -52,13 +52,13 @@
                 </div>
             </div>
             
-            <div class="form-group">
+  <!--          <div class="form-group">
                 <label class="control-label col-md-4">${span18n['createca_ojs_url']}</label>
                 <div class="col-md-8">
                     <a href="${espd.tedUrl}" target="_blank" class="btn btn-link" id="tedUrlLink">${espd.tedUrl}</a>
                 </div>
             </div>
-            
+                    -->
             <div class="form-group">
                 <label class="control-label col-md-4">${span18n['createca_ngoj_label']}</label>
                 <div class="col-md-8">
@@ -66,7 +66,7 @@
                                 placeholder="${i18n['ngoj_placeholder']}"/>
                 </div>
             </div>
-            ${span18n['createca_official_journal_alert']}
+  <!--          ${span18n['createca_official_journal_alert']} -->
         </div>
     </div>
 </div>
@@ -112,8 +112,8 @@
                 <label class="control-label col-md-4">${span18n['type_of_procedure']}</label>
                 <div class="col-md-8">
                     <form:select path="procedureType" cssClass="form-control">
-					    <form:option value="" label="${i18n['type_of_procedure_none']}" data-i18n="type_of_procedure_none"/>
-					    <form:option value="1" label="${i18n['type_of_procedure_open']}" data-i18n="type_of_procedure_open"/>
+					    <form:option value="1" label="${i18n['type_of_procedure_open']}" data-i18n="type_of_procedure_open"/>					    
+			 		    <form:option value="" label="${i18n['type_of_procedure_none']}" data-i18n="type_of_procedure_none"/>
 					    <form:option value="2" label="${i18n['type_of_procedure_resticted']}" data-i18n="type_of_procedure_resticted"/>
 					    <form:option value="10" label="${i18n['type_of_procedure_negotiation']}" data-i18n="type_of_procedure_negotiation"/>
 					    <form:option value="C" label="${i18n['type_of_procedure_dialogue']}" data-i18n="type_of_procedure_dialogue"/>

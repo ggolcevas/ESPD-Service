@@ -1,4 +1,4 @@
-<%@ page import="eu.europa.ec.grow.espd.domain.enums.other.Language" %>
+﻿<%@ page import="eu.europa.ec.grow.espd.domain.enums.other.Language" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
@@ -52,17 +52,18 @@
     <span id="banner-sub-title-text" class="hidden-print" data-i18n="app_subtitle"><s:message code="app_subtitle"/></span>
     <div id="top-lang-selector" class="hidden-print">
         <ul class="reset-list">
-            <li><a target="_blank" href="http://ec.europa.eu/growth/legal-notice/index_en.htm">${span18n["legal_notice"]}</a></li>
+	<font size="5" color="red">TESTAVIMO APLINKA!</font>
+           <%-- <li><a target="_blank" href="http://ec.europa.eu/growth/legal-notice/index_en.htm">${span18n["legal_notice"]}</a></li>
             <li><a target="_blank" href="http://ec.europa.eu/growth/cookies/index_en.htm">${span18n["cookies"]}</a></li>
             <li><a target="_blank" href="${pageContext.request.contextPath}/contact">${span18n["contact"]}</a></li>
-            <li><a target="_blank" href="${pageContext.request.contextPath}/about">${span18n["about"]}</a></li>
+            <li><a target="_blank" href="${pageContext.request.contextPath}/about">${span18n["about"]}</a></li> 
             <li>
                 <label for="language"></label><select id="language">
                 <c:forEach var="lang" items="<%=Language.VALUES%>">
                     <option value="${lang.code}" ${(lang.code eq pageContext.response.locale)?"selected":""}>${lang.sourceLanguage}</option>
                 </c:forEach>
             </select>
-            </li>
+            </li>--%>
         </ul>
     </div>
 </div>
