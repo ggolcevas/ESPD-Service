@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
@@ -34,14 +34,18 @@
         $('#whoareyou_ca').click(function () {
             $('#tab_ca').show();
             $('#tab_eo').hide();
+	    $('#tab-country-selection').hide(); //Lietuva - default
+
         });
         $('#whoareyou_ce').click(function () {
             $('#tab_ca').show();
             $('#tab_eo').hide();
+	    $('#tab-country-selection').hide(); //Lietuva - default
         });
         $('#whoareyou_eo').click(function () {
             $('#tab_eo').show();
             $('#tab_ca').hide();
+	    $('#tab-country-selection').show(); //Lietuva - not so default
         });
         var nextBtn = $('#nextBtn');
         $("*[name='agent']").click(function () {
@@ -79,12 +83,12 @@
         }
         // create a new espd
         if ($('#action1').is(':checked')) {
-            $('#tab-country-selection').show();
+            $('#tab-country-selection').hide(); //changed from show
             $('#where_are_you_from_eo').hide();
             nextBtn.prop('disabled', false);
         }
         $('#action1').click(function () {
-            $('#tab-country-selection').show();
+            $('#tab-country-selection').hide(); //changed from show
             $('#tab-single-upload').hide();
             $('#tab-multiple-upload').hide();
         });
@@ -179,6 +183,8 @@
                        	<a href='http://ec.europa.eu/DocsRoom/documents/16002/attachments/1/translations/${pageContext.response.locale}/renditions/native'>
                                 ${span18n['faq_leaflet']}
                         </a>
+			arba <a href="https://klausk.vpt.lt/hc/lt/sections/115001605685-EBVPD"> Viešųjų pirkimų tarnybos DUK tinklapyje Lietuvių kalba</a>
+<br></br><div id="filter_text"><img src="noprint.png"</img> ${span18n['notmandatoryprint']}</div>
                     </div>
                 </li>
             </ul>
@@ -220,13 +226,13 @@
                                   title="${i18n['tooltip_ca_can_create_espd']}"></span>
                         </div>
                         <div class="col-md-5">
-                            <form:input path="tedReceptionId" id="tedReceptionId" cssClass="form-control small"
+                            <form:input path="tedReceptionId" id="tedReceptionId" type="hidden" ssClass="form-control small"
                                         data-i18n="filter_ted_reception_id_placeholder"
                                         placeholder="${i18n['filter_ted_reception_id_placeholder']}"/>
                         </div>
                         <div class="col-md-4" style="padding-left: 0px;padding-right: 5px">
-                            <span data-i18n="tooltip_ted_reception_id" data-toggle="tooltip"
-                                  title="${i18n['tooltip_ted_reception_id']}"></span>
+<!--                             <span data-i18n="tooltip_ted_reception_id" data-toggle="tooltip"
+                                  title="${i18n['tooltip_ted_reception_id']}"></span> -->
                         </div>
                     </div>
                     <div class="row">

@@ -1,4 +1,4 @@
-<%@ page import="eu.europa.ec.grow.espd.domain.enums.other.Language" %>
+﻿<%@ page import="eu.europa.ec.grow.espd.domain.enums.other.Language" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
@@ -26,6 +26,15 @@
   ~ permissions and limitations under the Licence.
   ~
   --%>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131226795-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131226795-1');
+</script>
 
 <s:eval var="espdEnvironment" scope="page" expression="@espdConfiguration.espdEnvironment" />
 
@@ -44,12 +53,21 @@
 
     <fmt:formatNumber var="colLen" value="6" maxFractionDigits="0"/>
     <div class="col-lg-3 col-sm-6">
-        <c:forEach var="lang" items="<%=Language.VALUES%>" varStatus="i">
+<%--        <c:forEach var="lang" items="<%=Language.VALUES%>" varStatus="i">
             ${((i.index % colLen) == 0 && !i.first && !i.last) ? "</div><div class='col-lg-3 col-sm-6 langBoxBorder'>" : ""}
             <div class="splashLangDiv">
                 <a href="${pageContext.request.contextPath}/filter?lang=${lang.code}" class="splashLangBox">${lang.code}</a>
                 <a href="${pageContext.request.contextPath}/filter?lang=${lang.code}">${lang.sourceLanguage}</a>
             </div>
-        </c:forEach>
+        </c:forEach> --%>
+  <div class="splashLangDiv">
+                <a href="/espd-web/filter?lang=lt" class="splashLangBox">lt</a>
+                <a href="/espd-web/filter?lang=lt">Lietuvių kalba</a>
+            </div>   </div><div class='col-lg-3 col-sm-6 langBoxBorder'>
+
+  <div class="splashLangDiv">
+                <a href="/espd-web/filter?lang=en" class="splashLangBox">en</a>
+                <a href="/espd-web/filter?lang=en">English</a>
+            </div>
     </div>
 </div>

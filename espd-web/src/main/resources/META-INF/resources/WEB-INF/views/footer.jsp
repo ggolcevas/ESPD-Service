@@ -49,6 +49,6 @@
      --%>
     
     <%-- postponed piwik load --%>
-	<script defer src="//europa.eu/webtools/load.js" type="text/javascript"></script>
-	<script type="application/json"> { "utility": "piwik", "siteID": 401, "sitePath": ["ec.europa.eu\/tools\/espd"] } </script>
+<%--	<script defer src="//europa.eu/webtools/load.js" type="text/javascript"></script>
+	<script type="application/json"> { "utility": "piwik", "siteID": 401, "sitePath": ["ec.europa.eu\/tools\/espd"] } </script> --%>
 </c:if>

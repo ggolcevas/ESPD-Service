@@ -94,13 +94,13 @@
         </div>
     </footer>
 </div>
-<s:eval var="piwikEnabled" scope="page" expression='@espdConfiguration.piwikEnabled'/>
+<%--<s:eval var="piwikEnabled" scope="page" expression='@espdConfiguration.piwikEnabled'/>
 <s:eval var="piwikServer" scope="page" expression='@espdConfiguration.piwikServer'/>
 <s:eval var="piwikId" scope="page" expression='@espdConfiguration.piwikId'/>
 <c:if test="${piwikEnabled == true}">
 	<script defer src="//europa.eu/webtools/load.js" type="text/javascript"></script>
 	<script type="application/json"> { "utility": "piwik", "siteID": 401, "sitePath": ["ec.europa.eu\/tools\/espd"] } </script>
 </c:if>
-
+       --%>
 </body>
 </html>

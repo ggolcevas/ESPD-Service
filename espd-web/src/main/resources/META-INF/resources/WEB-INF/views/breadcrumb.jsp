@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
@@ -24,7 +24,7 @@
   ~ See the Licence for the specific language governing
   ~ permissions and limitations under the Licence.
   ~
-  --%>
+  
 <div id="breadbar" class="hidden-print">
     <s:eval var="breadcrumbAsMap" scope="page" expression="@espdConfiguration.breadcrumbAsMap"/>
     <c:if test="${not empty breadcrumbAsMap}">
@@ -46,4 +46,4 @@
             </c:forEach>
         </ul>
     </c:if>
-</div>
+</div>--%>
